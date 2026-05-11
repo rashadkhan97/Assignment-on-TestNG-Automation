@@ -17,6 +17,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
 
+import java.io.FileInputStream;
+import java.util.Properties;
+
 public class Utils {
     public static void handleAlerts(WebDriver driver) throws InterruptedException {
         // wait for alert and accept it
@@ -90,6 +93,27 @@ public class Utils {
         js.executeScript("window.localStorage.setItem('authToken', arguments[0]);", authToken);
         js.executeScript("window.localStorage.setItem('authTokenData', arguments[0]);", authTokenData);
         Thread.sleep(2000);
+    }
+
+    public String getResetLink() {
+        String link = "";
+        try {
+            Properties properties = new Properties();
+            properties.load(new FileInputStream("./src/test/resources/config.properties"));
+            link = extractLink(properties.getProperty("reset_link"));
+        } catch (IOException e) {
+            //e.printStackTrace();
+        }
+        return link;
+    }
+
+    public static String extractLink(String text) {
+        for (String word : text.split(" ")) {
+            if (word.startsWith("http")) {
+                return word;
+            }
+        }
+        return "";
     }
 
 }

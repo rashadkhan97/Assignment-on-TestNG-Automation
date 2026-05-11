@@ -1,0 +1,1 @@
+{"uuid":"20c645ef-141f-46e8-9e7b-cdaa25638a9c","name":"Automation-Assignment","children":["bc0f85f4-e245-446c-a740-ad690492c4f7"],"befores":[{"name":"Setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1778515770392,"stop":1778515772685}],"afters":[],"start":1778515770367,"stop":1778515777123}

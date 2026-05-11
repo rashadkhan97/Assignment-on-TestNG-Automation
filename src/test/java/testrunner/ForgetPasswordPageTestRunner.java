@@ -83,6 +83,7 @@ public class ForgetPasswordPageTestRunner extends Setup {
         Assert.assertTrue(messageActual.contains(messageExpected));
         Thread.sleep(1200);
 
+        // to see the inbox messages in terminal
         GmailService gmailService = new GmailService();
         gmailService.getGmailLink();
         gmailService.readMailById_02();
