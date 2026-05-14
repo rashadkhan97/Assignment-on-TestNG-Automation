@@ -40,14 +40,14 @@ public class LoginPage {
 
     }
 
-//    public void doLogout() {
-//
-//        LoginPage loginPage = new LoginPage(driver);
-//        UserProfilePage userProfilePage = new UserProfilePage(driver);
-//
-//        userProfilePage.btnElements.get(0).click();
-//        loginPage.menuRole.get(1).click();
-//
-//    }
+    public void doLogout() {
+
+        LoginPage loginPage = new LoginPage(driver);
+        UserProfilePage userProfilePage = new UserProfilePage(driver);
+
+        userProfilePage.btnElements.get(0).click();
+        loginPage.menuRole.get(1).click();
+
+    }
 
 }
