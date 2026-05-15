@@ -70,7 +70,6 @@ public class UserProfileTestRunner extends Setup {
         jsonArray.add(jsonObject);
 
         Utils.saveRegistrationData(jsonObject);
-
     }
 
 }
