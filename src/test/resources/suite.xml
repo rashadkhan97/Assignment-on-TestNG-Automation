@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name ="Automate daily finance management">
+    <test name="User Registration">
+        <classes>
+            <class name="testrunner.RegistrationPageTestRunner"></class>
+        </classes>
+    </test>
+    <test name="Send Reset Link">
+        <classes>
+            <class name="testrunner.ForgetPasswordPageTestRunner"></class>
+        </classes>
+    </test>
+    <test name="Reset Password">
+        <classes>
+            <class name="testrunner.ResetPasswordPageTestRunner"></class>
+        </classes>
+    </test>
+    <test name="User Login Using New Password">
+        <classes>
+            <class name="testrunner.LoginWithUpdatedPasswordTestRunner"></class>
+        </classes>
+    </test>
+    <test name="Add 2 Items">
+        <classes>
+            <class name="testrunner.AddItemPageTestRunner"></class>
+        </classes>
+    </test>
+    <test name="Update User Email">
+        <classes>
+            <class name="testrunner.UserProfilePageTestRunner"></class>
+        </classes>
+    </test>
+    <test name="User Login Using New Email">
+        <classes>
+            <class name="testrunner.LoginWithUpdatedEmailTestRunner"></class>
+        </classes>
+    </test>
+    <test name="Admin Login">
+        <classes>
+            <class name="testrunner.AdminLoginTestRunner"></class>
+        </classes>
+    </test>
+</suite>

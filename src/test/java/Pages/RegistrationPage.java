@@ -10,6 +10,10 @@ import java.util.List;
 
 public class RegistrationPage {
 
+    // this one used only for just click on register button for registering with ***CSV file***
+    @FindBy(partialLinkText = "Register")
+    public WebElement clickRegisterBtn;
+
     @FindBy(id = "firstName")
     WebElement txtFirstName;
 
@@ -52,6 +56,22 @@ public class RegistrationPage {
         radioBtn.get(0).click(); // selecting male with get(0)
         chkTerms.click();
         registerBtn.click();
+    }
+
+    // Registration process with CSV File
+    public void doLoginWithCSVFile(String firstname,String lastname, String email,String password,String phoneNumber,String address)
+    {
+        clickRegisterBtn.click();
+        txtFirstName.sendKeys(firstname);
+        txtLastName.sendKeys(lastname);
+        txtEmail.sendKeys(email);
+        txtPassword.sendKeys(password);
+        txtPhoneNumber.sendKeys(phoneNumber);
+        txtAddress.sendKeys(address);
+        radioBtn.get(1).click();
+        chkTerms.click();
+        registerBtn.click();
+
     }
 
 }

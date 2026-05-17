@@ -1,28 +1,21 @@
 package testrunner;
 
-import com.github.javafaker.Faker;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import Pages.LoginPage;
 import Pages.UserProfilePage;
 import Setup.Setup;
-import Setup.UserModel;
 import utils.Utils;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.time.Duration;
-import java.util.List;
 
-public class UserProfileTestRunner extends Setup {
+public class UserProfilePageTestRunner extends Setup {
 
    // doing login with updated pass as lastly we have updated the password. Its details in ResetPasswordTestRunner
     @Test(priority = 1, description = "User can login successfully")
